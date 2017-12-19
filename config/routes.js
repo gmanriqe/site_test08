@@ -43,7 +43,11 @@ module.exports.routes = {
 
   //registrarse
   'GET /register': { view: 'usuario/register' },
-  'POST /user': 'UserController.register'
+  'POST /user': 'UserController.register',
+
+  /********* 9no **********/
+  'GET /wellcome': 'PostController.wellcome',
+  'GET /wellcometwo': 'PostController.wellcometwo',
 
   /***************************************************************************
   *                                                                          *
