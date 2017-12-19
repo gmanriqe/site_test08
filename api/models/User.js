@@ -6,7 +6,7 @@
 */
 
 /********* 1ero **********/
-const bcrypt = require('bcrypt-nodejs');
+
 module.exports = {
 
   attributes: {
@@ -29,22 +29,8 @@ module.exports = {
     password: {
       type: 'string',
       required: true
-    },
-    customToJSON: function() {
-      return _.omit(this, ['password'])
-    },
-
-    //user es la variable con los datos del usuario
-    beforeCreate: function(user, cb){
-      bcrypt.genSalt(10, function(err, salt){
-        bcrypt.hash(user.password, salt, null, function(err, hash){
-          if(err) return cb(err);
-          user.password = hash;
-          return cb();
-        });
-      });
     }
-    // Para garantizar que no devolvemos la contraseña cuando buscamos el modelo de usuario, la función customToJSON lo elimina.
   }
+
 };
 

@@ -8,9 +8,9 @@
 module.exports = {
 	register: function(req, res) {
         var data = {
+            email : req.body.email,
             username : req.body.username,
-            email : user.body.email,
-            password:  user.body.password
+            password:  req.body.password
         }
 
         User

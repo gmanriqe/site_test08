@@ -16,12 +16,6 @@ passport.deserializeUser(function(username, cb){ //username = {username:'gmanriq
     });
 });
 
-// passport.deserializeUser(function(id, cb){
-//     User.findOne({id:id}, function(err, user) {
-//         cb(err, users);
-//     });
-// });
-
 
 passport.use(new LocalStrategy({
     usernameField: 'username',
@@ -43,22 +37,5 @@ passport.use(new LocalStrategy({
                 return cb(false, null, {message: ':('});
             }
         })
-        // User.findOne({username: username}, function(err, user){
-            // if(err) return cb(err);
-            // if(!user) return cb(null, false, {message: 'Usuario No Existe'});
-            // bcrypt.compare(password, user.password, function(err, res){
-            //     console.log(password);
-            //     console.log(user.password);
-            //     console.log(res);
-            //     if(!res) return cb(null, false, { message: 'Password Invalidad' });
-
-            //     let userDetails = {
-            //         email: user.email,
-            //         username: user.username,
-            //         id: user.id
-            // };
-            // return cb(null, userDetails, { message: 'Login Exitoso'});
-        // });
-        // });    
 }));
 

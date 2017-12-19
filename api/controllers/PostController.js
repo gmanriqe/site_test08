@@ -1,3 +1,10 @@
+/**
+ * PostController
+ *
+ * @description :: Server-side logic for managing auths
+ * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ */
+
 /********* 10no **********/
  module.exports = {
     //esta accion lo restrinjo si no estas autenticado
